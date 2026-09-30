@@ -1,0 +1,22 @@
+POST http://localhost:3000/posts
+Content-type:application/json
+{
+  "userId":1,
+  "title" : "What's new eiht NestJs",
+  "postType":"post",
+  "slug":"new-with-nestjs",
+  "content":"test content",
+  "status":"draft",
+  "schema":"{\r\n \"@context\": \"https:\/\/schema.org\",\r\n \"@type\":\"Person\"\r\n}",
+  "featuredImage":"http://localhost.com/images/image1.jpg",
+  "publishedOn":"2024-03-16T07:46:32+0000",
+  "tags":["nestJs","typescript"],
+  "categories":["programming","AI"],
+  "metaOptions": [
+    {
+      "key" :"testKey",
+      "value":20
+    }
+  ]
+  
+}

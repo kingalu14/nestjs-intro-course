@@ -1,0 +1,16 @@
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+{
+  "username": "John",
+  "password": "password123",
+  "id": 1
+}
+
+PATCH http://localhost:3000/change-password
+Content-Type: application/json
+
+{
+  "username": "John",
+  "password": "password123",
+  "id": 1
+}
