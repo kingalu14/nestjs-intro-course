@@ -1,5 +1,5 @@
 import { Controller, Get, Param, Post, Body, Patch } from '@nestjs/common';
-import { PostsService } from './provider/posts.service';
+import { PostsService } from './providers/posts.service';
 import { ApiParam, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { CreatePostDto } from './dtos/create.post.dto';
 import { PatchPostDto } from './dtos/patch.post.dto';
