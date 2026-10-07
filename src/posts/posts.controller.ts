@@ -30,9 +30,9 @@ export class PostsController {
     status: 201,
     description: 'The post has been successfully created.',
   })
-  createPost(@Body() createPostDto: CreatePostDto): string {
+  createPost(@Body() createPostDto: CreatePostDto): any {
     console.log(createPostDto);
-    return 'This action creates a post';
+    return this.postsService.create(createPostDto);
   }
 
   @Patch()

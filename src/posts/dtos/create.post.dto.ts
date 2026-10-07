@@ -159,28 +159,20 @@ export class CreatePostDto {
     items: {
       type: 'object',
       properties: {
-        key: {
-          type: 'string',
-          description:
-            'The key can be any string identifire for your meta option',
-          example: 'sidebarEnabled',
-        },
-        value: {
-          type: 'any',
-          description: 'Any value that you want to save to the key',
-          example: true,
+        metaValue: {
+          type: 'json',
+          description: 'The metaValue is JSON string',
+          example: '{"sidebarEnabled":true}',
         },
       },
     },
     example: [
       {
-        key: 'testKey',
-        value: 20,
+        metaValue: '{"sidebarEnabled" : true,"footerActive":true}',
       },
     ],
   })
   @IsOptional()
-  @IsArray()
   @Type(() => CreatePostMetaOptionsDto)
-  metaOptions?: CreatePostMetaOptionsDto[];
+  metaOptions?: CreatePostMetaOptionsDto | null;
 }
